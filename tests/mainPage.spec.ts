@@ -11,7 +11,7 @@ test.describe('Open SAP Fioneer main page', () => {
         await mainPage.navigateTo();
     });
 
-    test.only('and verify key facts section', async () => {
+    test('and verify key facts section', async () => {
         // Arrange
         const expectedKeyFacts = [
             '1,200+ financial institutions run SAP Fioneer software globally',
