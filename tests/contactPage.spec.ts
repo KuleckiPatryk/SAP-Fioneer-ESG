@@ -17,6 +17,7 @@ test.describe('Open SAP Fioneer contact page', () => {
         const expectedMessage = 'Email must be formatted correctly.';
         const expectedTitle = 'SAP Fioneer | Contact | Get in touch!';
         const expectedUrl = 'https://www.sapfioneer.com/contact/';
+        const invalidEmail = 'test';
 
         // Act
         await mainPage.clickGetInTouchButton();
@@ -26,7 +27,7 @@ test.describe('Open SAP Fioneer contact page', () => {
         await expect(page).toHaveURL(expectedUrl);
 
         // Act
-        await contactPage.setWorkEmail('test');
+        await contactPage.setWorkEmail(invalidEmail);
         await contactPage.blurWorkEmail();
 
         // Assert
