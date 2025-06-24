@@ -22,7 +22,7 @@ test.describe('Open SAP Fioneer main page', () => {
 
         // Act
         await mainPage.scrollToKeyFactsSection();
-        var currentKeyFacts = await mainPage.getKeyFacts();
+        const currentKeyFacts = await mainPage.getKeyFacts();
 
         // Assert
         expect(currentKeyFacts).toEqual(expectedKeyFacts);
@@ -35,7 +35,6 @@ test.describe('Open SAP Fioneer main page', () => {
         const expectedUrl = 'https://www.sapfioneer.com/finance-esg/esg-kpi-engine/';
 
         // Act
-        await mainPage.navigateTo();
         await mainPage.navigateToEsgKpiEngine();
 
         // Assert
